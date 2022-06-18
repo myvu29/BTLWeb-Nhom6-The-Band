@@ -1,113 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- style_title -->
-    <link rel="icon" style=" border-radius: 30px " href="image/anhtieude.jpg" type="image/x-icon" >
-    <title>BLACKPINK</title>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- font Awesome icon -->
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <!-- font-style  -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <title>ELEMENTS</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+   <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <style>
+    /*backtop*/
+#backtop{
+  width: 50px;
+  height: 50px;
+  background: rgb(249, 118, 95);
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer; 
+}
+  </style>
   
-    <!-- style_about.css -->
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body class="sub_page">
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="index.html">
-               
-                <span class="material-icons">
-                  library_music
-                  </span>
-                <span>
-                  BLACKPINK
-                </span>
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+           
+            <img src="image/tieude.png" alt="">
+            <span style="color: #ffffff;">
+              BLACKPINK
+            </span>
+          </a>
+        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-         
-    
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-                  <ul class="navbar-nav  ">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="index.html" >HOME<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">About </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="album.html">Album </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="event.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    
-                  </ul>
-                  <!-- <nav class="navbar bg-light">
-                    <div class="container-fluid">
-                    
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </nav> -->
-                </div>
-                <!-- <div class="quote_btn-container  d-flex justify-content-center">
-                  <a href="">
-                    <img src="images/call.png" alt="">
-                    CALL : +01 1234567890
-                  </a>
-                  <a href="">
-                    <span>
-                      @
-                    </span>
-                    demo@gmail.com
-                  </a>
-                </div> -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html" >HOME<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Albums</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="event.html"> EVENTS </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="event.html">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="initial-value: 1;">
+        <img src="image/Nen.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1><strong>ABOUT</strong></h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="image/nen-about1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1><strong>ABOUT</strong></h1>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="image/nen_about4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1><strong>ABOUT</strong></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- news section -->
+
+
+
+
+  <section class="news_section layout_padding">
+    <div class="container">
+      <div class="d-center center-column align-items-end">
+        <div class="custom_heading-container">
+          <hr>
+          <h1 style="color: #ff2d55">
+            <strong> What does Blackpink mean?</strong>
+          </h1>
+
+        </div>
+        <p >
+          Blackpink is more than just the juxtaposition of two colors that happen to look awesome together. According to a YG Entertainment rep for the group, it's an attempt to "contradict" what people normally think about the color pink – like the idea that it's about being "pretty."        </p>
+        <p>
+          "Blackpink actually means to say that 'pretty isn't everything'," said the rep. "It also symbolizes that they are a team that encompasses not only beauty, but also great talent." We'd say this is a pretty killer explanation for the girls, to be honest.
+        </p>
+        </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="img-box">
+              <img src="image/nen_about2.jpg" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+                <a href="">
+                  <img src="image/like.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/comment.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/share.png" alt="">
+                </a>
               </div>
-            </nav>
+            </div>
+            <!-- <div class="detail-box">
+              <h4>
+                elements good design
+              </h4>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem
+              </p>
+              <div>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div> -->
           </div>
-        </header>
-        <!-- end header section -->
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img style =" border-radius:30px;height: 500px; "src="image/aboutJisoo1.jpg" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+                <a href="">
+                  <img src="image/like.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/comment.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+              <h2><strong>
+                 JISOO
+              </strong>
+             
+              </h2>
+              <p>
+                <strong>Tên thật:</strong> Kim Ji Soo (biệt danh: Jichu, Chi Choo)
+              </p>
+              <p>
+                 <strong>Vai trò:</strong> Ca sĩ chính
+              </p>
+            
+              <p>
+                Jisoo chắc chắn là người tạo ra tâm trạng của Blackpink. Tính cách 4D của cô ấy mang lại cho cô ấy một phong thái độc đáo trong nhóm và sự hài hước của cô ấy khiến cô ấy có một luồng gió mới. Giọng ca chính 24 tuổi sinh ra tại Seoul được đào tạo trong 5 năm trước khi ra mắt với Blackpink và là thành viên thứ ba được tiết lộ. Là người lớn tuổi nhất trong nhóm, Jisoo nói được 3 thứ tiếng và có thể nói tiếng Hàn, tiếng Nhật và tiếng Trung.
+              </p>
+                
+              
+            </div>
+            <div class="link_readmore">
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img style =" border-radius:30px;height: 500px;" src="image/aboutlisa.jpg" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+                <a href="">
+                  <img src="image/like.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/comment.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+              <div class="detail-box">
+                <h2><strong>
+                   LISA
+                </strong>
+                
+                </h2>
+                <p>
+                  <strong>Tên thật:</strong>  Lalisa / Pranpriya Manoban (biệt danh: Lalice, Laliz)
+                </p>
+                <p>
+                   <strong>Vai trò:</strong> Vũ công chính, Rapper chính, Ca sĩ chính
+                </p>
+               
+                <p>
+                  Em út của nhóm, Lisa thực sự sinh ra ở Bangkok, Thái Lan và sau đó chuyển đến Hàn Quốc. Cô ấy là thành viên thứ hai của nhóm được tiết lộ, nói được tiếng Hàn, tiếng Anh, tiếng Nhật, tiếng Thái và một chút tiếng Trung. Giống như một maknae thực thụ, cô ấy cực kỳ vui tươi và tinh nghịch, và cô ấy cực kỳ thích trang điểm.                 </p>
+                  
+               
+              </div>
+              <div class="link_readmore">
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img style =" border-radius:30px;height: 500px;" src="image/aboutrose.webp" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+                <a href="">
+                  <img src="image/like.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/comment.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+              <h2><strong>
+                ROSE
+             </strong>
+             
+             </h2>
+             <p>
+               <strong>Tên thật:</strong> Park Chae Young (biệt danh: Pasta, Rose, Rosie)
+             </p>
+             <p>
+                <strong>Vai trò:</strong> Ca sĩ chính, Vũ công chính
+
+             </p>
+            
+             <p>
+              Rosé, 22 tuổi, là giọng ca chính của Blackpink, và cô ấy là thành viên cuối cùng của nhóm được tiết lộ. Sinh ra ở Auckland, New Zealand, cô ấy là một hoạt náo viên trước khi ra mắt với Blackpink. Cô ấy có một giọng hát độc đáo, tinh tế và có thể chơi cả piano và guitar. Điều thú vị là cô ấy thuận tay trái và thích được gọi bằng tên thật hơn bất kỳ biệt danh hoặc danh hiệu thú cưng nào khác. Cô ấy có thể nói tiếng Hàn, tiếng Anh và tiếng Nhật - và " Nữ thần của Blackpink " hoàn toàn có thể bắt kịp những nốt cao đó . Cô ấy có thể nhỏ bé, nhưng giọng hát nội lực của cô ấy sẽ đánh gục bạn.
+              
+            </div>
+            <div class="link_readmore">
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img style =" border-radius:30px;height: 500px;"  src="image/aboutjennie33.jpg" alt="">
+            </div>
+            <div class="action-box">
+              <div class="action">
+                <a href="">
+                  <img src="image/like.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/comment.png" alt="">
+                </a>
+                <a href="">
+                  <img src="image/share.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="detail-box">
+               <h2><strong>
+                JENNIE
+             </strong>
+             
+             </h2>
+             <p>
+               <strong>Tên thật:</strong> Kim Jennie (biệt danh: Jendeukie)
+
+             </p>
+             <p>
+                <strong>Vai trò:</strong> Rapper chính, Ca sĩ chính
+             </p>
+            
+             <p style=" text-overflow: ellipsis;">
+              Jennie là rapper 24 tuổi của Blackpink, và cô là thành viên đầu tiên của nhóm được tiết lộ trước công chúng. Cô ấy có thể nói thành thạo tiếng Hàn, tiếng Nhật và tiếng Anh, và được biết đến với biệt danh " Công chúa YG " - cũng như "Người Gucci" nhờ sở thích đắt tiền của mình. Cô ấy nổi tiếng đến mức cô ấy đã phát hành một ca khúc solo vào cuối năm ngoái, có tên là "SOLO".
+              
+            </div>
+            <div class="link_readmore">
+              <a href="">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end news section -->
+  <!-- popup -->
 
 
-<!-- start slider content -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" style="initial-value: 5;">
-              <img src="image/Nen.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="image/nen_about.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="image/nen_about4.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-      
-      
-      
+<button type="button" id="btn" onclick="show()">show</button>
+
+    <div class = "show-content">
+        <button type="button" onclick="hide()">hide</button>
+    </div>
+
 
 <!-- info section footer-->
 <section class="info_section layout_padding">
@@ -115,22 +377,22 @@
     <div class="info_social">
       <div>
         <a href="">
-          <img src="images/fb.png" alt="">
+          <img src="image/fb.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/twitter.png" alt="">
+          <img src="image/twitter.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/linkedin.png" alt="">
+          <img src="image/linkedin.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/insta.png" alt="">
+          <img src="image/insta.png" alt="">
         </a>
       </div>
     </div>
@@ -151,6 +413,7 @@
           </tbody>
       </table>
     </div>
+
     <div>
       <div class="main_item">
         <p>© MuSIC 2022</p>
@@ -171,12 +434,77 @@
     </div>
   </div>
 </section>
-
 <!-- end info_section footer-->
 
-  <!-- JavaScript Bundle with Popper -->
+
+
+
+
+
+<!-- bsw_popup_buy tickets -->
+<div id='bsw_popup'>
+  <div class='bsw_popup_'>
+    <div class="main">
+      <a class='close' href="#close" title='Close'>
+        <img src="images/daux.png">
+      </a>
+    </div>
+    <div class="main1">
+          <img style="height: 370px; width: 300px;" src="images/anh2.2.png" alt="">
+          <h5></h5>
+    </div>
+    <div class="main2">
+      
+    </div>
+ 
+    
+  </div>
+</div> 
+
+
+  <!-- backtop -->
+  <div id="backtop" style="display: none;">
+    <i class="far fa-chevron-double-up"></i>
+  </div>
+
+<!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+      $(window).scroll(function(){
+          if ($(this).scrollTop()){
+              $("#backtop").fadeIn();
+
+          }else{
+              $("#backtop").fadeOut();
+          }
+      });
+      $("#backtop").click(function(){
+          $("html, body").animate({
+              scrollTop: 0
+          }, 250);
+      });
+
+  });
+
+
+
+
+  // pop up demo show hide 
+  function show(){
+      document.querySelector(".show-content").style.display = 'block'
+  }
+
+  function hide(){
+      document.querySelector(".show-content").style.display = 'none'
+  }
+
+
+
+</script>
+
+
 </html>
