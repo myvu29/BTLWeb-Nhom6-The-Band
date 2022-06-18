@@ -19,29 +19,48 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fascinate&family=Jost:ital,wght@0,681;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fascinate&family=Jost:ital,wght@0,681;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
   <!-- bootstrap core css -->
   <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <!-- link font Jost  -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Jost:ital,wght@0,681;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Jost:ital,wght@0,681;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/about.css">
+<!-- <link rel="stylesheet" href="css/about.css"> -->
 
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/event.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/event.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <style>
+    /*backtop*/
+#backtop{
+  width: 50px;
+  height: 50px;
+  background: rgb(249, 118, 95);
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer; 
+}
+  </style>
 
 </head>
 
@@ -53,10 +72,8 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
            
-            <span class="material-icons">
-              library_music
-              </span>
-            <span>
+            <img src="image/tieude.png" alt="">
+            <span style="color: #ffffff;">
               BLACKPINK
             </span>
           </a>
@@ -84,21 +101,15 @@
                   <a class="nav-link" href="event.html">Contact us</a>
                 </li>
               </ul>
-              <nav class="navbar bg-black">
-                <div class="container-fluid">
-                
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
             </div>
-            
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
         </nav>
       </div>
-    </header>
+    </header>    
     <!-- end header section -->
   </div>
 
@@ -109,7 +120,7 @@
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
-      <img style="height: 600px;"src="image/event33.jpg" class="d-block w-100" alt="...">
+      <img style="height: 600px;"src="image/event11.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h1><strong>EVENT</strong></h1>
       </div>
@@ -126,7 +137,7 @@
     <div class="content_text">
       <h1><strong>Cornelius - Music Lights Fest</strong></h1>
       <h5> January 27, 2021 @ 4:50 pm</h5>
-      <a href="#"><button  type="button" class="btn ">BUY TICKETS</button></a>
+      <a href=".show-content"><button  type="button" class="btn " onclick="show()">BUY TICKETS</button></a>
       <h4>
       See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing leather detail shoulder contrastic colour contour mershar for the stunning silhouette working peplum.
       </h4>
@@ -142,6 +153,45 @@
       <h1><strong>Star Music Festival</strong></h1>
       <h5> January 27, 2021 @ 4:50 pm</h5>
       <button  type="button" class="btn ">BUY TICKETS</button>
+      <h4>
+      See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing leather detail shoulder contrastic colour contour mershar for the stunning silhouette working peplum.
+      </h4>
+    </div>
+    
+  </div>
+  <div class="plain_than">
+    <p style ="text-align: center; ">
+    <img style =" height: 700px; width: 1500px;" src="image/event4.jpg" alt="">
+    </p>
+    <div class="content_text">
+      <h1><strong>Cornelius - Music Lights Fest</strong></h1>
+      <h5> January 27, 2021 @ 4:50 pm</h5>
+      <button  type="button" class="btn " onclick="show()">BUY TICKETS</button>
+      <div id = "show-content">
+    <button type="button" onclick="hide()">hide</button>
+</div>
+
+      <h4>
+      See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing leather detail shoulder contrastic colour contour mershar for the stunning silhouette working peplum.
+      </h4>
+    </div>
+    
+  </div>
+
+<!-- <button type="button" id="btn" onclick="show()">show</button>
+
+<div class = "show-content">
+    <button type="button" onclick="hide()">hide</button>
+</div> -->
+
+  <div class="plain_than">
+    <p style ="text-align: center; ">
+    <img style =" height: 700px; width: 1500px;" src="image/event5.jpg" alt="">
+    </p>
+    <div class="content_text">
+      <h1><strong>Star Music Festival</strong></h1>
+      <h5> January 27, 2021 @ 4:50 pm</h5>
+      <button  type="button" class="btn " >BUY TICKETS</button>
       <h4>
       See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing leather detail shoulder contrastic colour contour mershar for the stunning silhouette working peplum.
       </h4>
@@ -240,28 +290,79 @@
   <!-- end portfolio section -->
 
 
+
+<!-- bsw_popup_buy tickets -->
+<div id='bsw_popup'>
+  <div class='bsw_popup_'>
+    <div class="main">
+     
+    </div>
+
+    <div class="form-floating mb-3">
+      <!-- <a class='close' href="#close" title='Close'>
+        <h5 style=" margin-left: 20px; ">Close</h5>
+      </a>      -->
+      <h1 style="text-align: center; background-color: aqua; padding: 0;"><strong>TICKETS </strong></h1>
+      <h5>Tickets, $15 per person</h5>
+      <input type="number" class="form-control" id="floatingPassword" placeholder="">
+      <label for="floatingPassword"></label>
+    </div>
+    <div class="form-floating">
+      <h5> Send To</h5>
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput"></label>
+      <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Primary</button>
+
+    </div>
+    <!-- <button type="button" class="btn btn-primary" style="width: 100%;">Primary</button> -->
+
+    <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+    <!-- <div class="mb-3">
+      <a class='close' href="#close" title='Close'>
+        <h5 style=" margin-left: 20px; ">Close</h5>
+      </a>      <h1 style="text-align: center;">TICKETS</h1>
+
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div> -->
+    <div class="main1">
+          <h5></h5>
+    </div>
+    <div class="main2">
+      
+    </div>
+ 
+    
+  </div>
+</div> 
+
+
 <!-- info section footer-->
 <section class="info_section layout_padding">
   <div class="container">
     <div class="info_social">
       <div>
         <a href="">
-          <img src="images/fb.png" alt="">
+          <img src="image/fb.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/twitter.png" alt="">
+          <img src="image/twitter.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/linkedin.png" alt="">
+          <img src="image/linkedin.png" alt="">
         </a>
       </div>
       <div>
         <a href="">
-          <img src="images/insta.png" alt="">
+          <img src="image/insta.png" alt="">
         </a>
       </div>
     </div>
@@ -305,6 +406,10 @@
 
 <!-- end info_section footer-->
 
+  <!-- backtop -->
+  <div id="backtop" style="display: none;">
+    <i class="far fa-chevron-double-up"></i>
+  </div>
  
   <!-- footer section -->
   
@@ -313,5 +418,25 @@
 
 
 </body>
+<!-- backtop  -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+      $(window).scroll(function(){
+          if ($(this).scrollTop()){
+              $("#backtop").fadeIn();
+
+          }else{
+              $("#backtop").fadeOut();
+          }
+      });
+      $("#backtop").click(function(){
+          $("html, body").animate({
+              scrollTop: 0
+          }, 250);
+      });
+
+  });
+</script>
 
 </html>

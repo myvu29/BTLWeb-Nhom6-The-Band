@@ -1,0 +1,219 @@
+.carousel-inner img{
+    width: 100%;
+    height: 860px;
+}
+.carousel-inner h1{
+    font-size: 150px;
+    /* margin-bottom: 200px; */
+    /* padding: 480px;  */
+    text-align: center;
+    font-family:  "Roboto", sans-serif;
+    justify-content: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-inner h2{
+    font-family: 'Comic Neue', cursive;
+            font-family: 'Roboto', sans-serif; 
+            color: #ffff;
+  }
+/* css about section */
+.news_section h2,
+.news_section p,
+.news_section a {
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  color: #fff;
+}
+
+.news_section .box {
+  margin-top: 45px;
+  
+}
+
+.news_section .box img {
+  width: 100%;
+}
+
+.news_section .box .action-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.news_section .box .action-box a {
+  margin-left: 15px;
+  opacity: 0.6;
+}
+
+.news_section .box .action-box a img {
+  width: 20px;
+}
+
+.news_section .box .action-box a:hover {
+  opacity: 1;
+}
+
+.news_section .box .detail-box h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.news_section .box .detail-box p {
+  margin-top: 15px;
+}
+
+/* cat chuoi */
+.detail-box{
+  display: -webkit-box;
+  /* width: 300px; */
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  /* background:blue; */
+}
+.news_section .box  .link_readmore a {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 45px;
+}
+
+
+
+
+
+
+#bsw_popup_1{
+  top:0px;
+  left:0;
+  right:0;
+  bottom:0;
+  position:fixed;
+  opacity:0;
+  visibility:hidden;
+  transition:.5s;
+  transform:scale(0.02)
+}
+#bsw_popup_1:target{
+  transform:scale(1);
+  background:rgba(0,0,0,.2);
+  opacity:1;
+  visibility:visible;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:0;
+  z-index:999999999999;
+  transition:.5s
+}
+
+
+/* bsw_popup : chung */
+.bsw_popup_{
+  background:rgb(222, 176, 176);
+  border-radius:4px;
+  z-index:999;
+  width:940px;
+  height: 500px;
+  max-width:100%;
+  position:fixed;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  margin:0;
+  padding:20px;
+  box-sizing:border-box;
+  box-shadow:0 0 100px rgba(0,0,0,.1)
+}
+.main{
+  padding-left: 99%;
+  width: 20px;
+  height: 20px;
+}
+.main img{
+  width: 17px;
+  height: 17px;
+ 
+}
+.main1{
+  width: 360px;
+  padding-top: 0px;
+  float: left;
+
+}
+.main1 h5{
+  font-size: 18px;
+  color: black;
+  padding-top: 20px;
+}
+.main2{
+  width: 540px;
+  padding-top: 20px;
+  padding-right: 10px;
+  float: right;
+ 
+}
+
+.main2 ol li{
+  font-size: 18px;
+  padding-bottom: 37px;
+}
+.main2 audio{
+  width: 330px;
+  height: 30px;
+  padding-top: 5px
+
+}
+/* end bsw_popup */
+
+
+
+
+
+/*  pop up demo show hide  */
+
+.show-content{
+  width: 500px;
+  height: 500px;
+  display:none;
+  background-color: red;
+  /* để cái absolute này thì mới chỉnh được top left các thứ */
+  position:absolute;
+  /* 3 dòng dưới này là căn giữa,có nhiều cách căn giữa tùy mỗi người */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation-name: example;
+  animation-duration: 1s;
+
+}
+@keyframes example {
+from {left: 50%;
+    top:-100%;
+     transform: translate(-50%,0%);}
+to {top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);}
+}
+.hide{
+  animation-name: example1;
+  animation-duration: 1s;
+}
+@keyframes example1 {
+from {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);}
+to {left: 50%;
+  top:-150%;
+  transform: translate(-50%,0%);}
+}
