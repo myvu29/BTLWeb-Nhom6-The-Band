@@ -52,106 +52,84 @@
   }
 
   /*  pop up demo show hide  */
+  .plain_than_img {
+    width: 100%;
+  }
 
-#show-content{
-    z-index: 10000000000;
-    width: 500px;
-    height: 500px;
-    display:none;
-    background-color: red;
-    /* để cái absolute này thì mới chỉnh được top left các thứ */
-    position:absolute;
-    /* 3 dòng dưới này là căn giữa, cách căn giữa */
+  .form-buy-ticket {
+    display: none;
+    width: 100%;
+    height: 100%;
+position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 99999999;
+  }
+  .center{
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    animation-name: example;
-    animation-duration: 1s;
-  
   }
-  @keyframes example {
-  from {left: 50%;
-      top:-100%;
-       transform: translate(-50%,0%);}
-  to {top: 50%;
+  .form-buy-ticket_content {
+    width: 60%;
+
+    background-color: rgb(255, 255, 255);
+    animation-name: show;
+    transform: translate(-50%, -50%);
+    animation-duration: 0.5s;
+  }
+
+  @keyframes show {
+    from {top: -150%;
     left: 50%;
-    transform: translate(-50%,-50%);}
-  }
-  .hide{
-    animation-name: example1;
-    animation-duration: 1s;
-  }
-  @keyframes example1 {
-  from {
-    top: 50%;
+    transform: translate(-50%, 0);}
+    to {top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);}
-  to {left: 50%;
-    top:-150%;
-    transform: translate(-50%,0%);}
+    transform: translate(-50%, -50%);}
   }
+
+  .hide-form-buy-ticket{
+    position: absolute ;
+    top: 50% ;
+    left: 50%;
+    animation-name: hide;
+    animation-duration: 0.5s;
+  }
+  @keyframes hide {
+    from {
+    top: 50% ;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+    to {
+      top: -150%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  .form-buy-ticket_content_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: black;
+  }
+  .btn-close-form-buy-ticket:hover{
+    color: rgb(221, 221, 221);
+  }
+  .form-buy-ticket_content_body{
+    padding: 40px 10% 40px 10%;
+
+  }
+  .btn-block:hover{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  } 
+ 
 
 
 
-  
-/* bsw_popup : chung */
-.bsw_popup_{
-    background:rgb(201, 210, 222);
-    border-radius:4px;
-    z-index:999;
-    width:940px;
-    height: 500px;
-    max-width:100%;
-    position:fixed;
-    top: 50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    margin:0;
-    padding:20px;
-    box-sizing:border-box;
-    box-shadow:0 0 100px rgba(0,0,0,.1)
-  }
-  .main{
-    padding-left: 99%;
-    width: 20px;
-    height: 20px;
-  }
-  .main img{
-    width: 17px;
-    height: 17px;
-   
-  }
-  .main1{
-    width: 360px;
-    padding-top: 0px;
-    float: left;
-  
-  }
-  .main1 h5{
-    font-size: 18px;
-    color: black;
-    padding-top: 20px;
-  }
-  .main2{
-    width: 540px;
-    padding-top: 20px;
-    padding-right: 10px;
-    float: right;
-   
-  }
-  
-  .main2 ol li{
-    font-size: 18px;
-    padding-bottom: 37px;
-  }
-  .main2 audio{
-    width: 330px;
-    height: 30px;
-    padding-top: 5px
-  
-  }
-  /* end bsw_popup */
-  
   
   
   
