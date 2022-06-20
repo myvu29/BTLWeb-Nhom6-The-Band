@@ -84,14 +84,14 @@
                   <a class="nav-link" href="about.html">About </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="portfolio.html">Albums</a>
+                  <a class="nav-link" href="album.html">Albums</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="event.html"> EVENTS </a>
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="event.html">Contact us</a>
+                  <a class="nav-link" href="contact.html">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -458,13 +458,14 @@
       <div class="main_item">
         <p>© MuSIC 2022</p>
         <form class="row g-3">
-          <div class="col-auto">
-            <input type="email" class="form-control" id="inputemail2" placeholder="Email Address">
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-          </div>
-        </form>
+        <div class="col-auto">
+          <input type="email" class="form-control" id="email" placeholder="Email Address">
+          <div id="errorEmail"  class="abc text-danger"></div>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3" onclick="return checkIn()">Submit</button>
+        </div>
+      </form>
       </div>
 
       <p>
@@ -510,12 +511,44 @@
 
   });
 
+</script>
+<!-- email cua footer -->
+<script>
+  function checkEmail () {
+    let email=document.getElementById('email').value;
+    if(email === '')
+    {
+        document.getElementById('errorEmail').innerHTML = 'Email không được để trống <br>';
+        return false
+    }
+    else{
+        let regex_email =/^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/
+        if(!regex_email.test (email)){
+            document. getElementById ('errorEmail').innerHTML='Email không hợp lệ <br>';
+            return false;
+        }
+        else{
+            document. getElementById ('errorEmail').innerHTML='';
+            return true;
+        }
+        
+    }
+}
+    function checkIn() {
 
-
-
+      let a = checkEmail()
+      
+      if(a ){
+          alert("Chào mừng bạn đến với the band.");
+          return true;
+      }
+      return false;
+}
 
 
 </script>
+
+
 
 
 </html>
