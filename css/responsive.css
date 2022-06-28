@@ -120,9 +120,28 @@
   .custom_heading-container hr {
   display: none;
   }
+
+  .plain_than img{
+    width: 100%;
+    height: auto;
+  }
+  .plain_than .content_text h5{
+    width: 100%;
+  }
+
 }
 
-@media (max-width: 480px) {
+@media all and (max-width: 480px) {
+  /* .plain_text  .container img .content_text{
+    width: 100%;
+  } */
+  .plain_than img{
+    width: 100%;
+    height: auto;
+  }
+   .content_text h5{
+    color: #0000;
+  }
 
   .slider_section .carousel-control-prev,
   .slider_section .carousel-control-next {

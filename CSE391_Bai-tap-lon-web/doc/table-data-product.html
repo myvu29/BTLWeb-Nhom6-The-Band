@@ -232,15 +232,15 @@ data-keyboard="false">
       <div class="row">
         <div class="form-group col-md-6">
             <label class="control-label">Mã vé</label>
-            <input class="form-control" type="number" value="011">
+            <input id="input-mave" class="form-control" type="number" value="011">
           </div>
         <div class="form-group col-md-6">
             <label class="control-label">Tên vé</label>
-          <input class="form-control" type="text" required value="The Show">
+          <input id="input-tenve" class="form-control" type="text" required value="The Show">
         </div>
         <div class="form-group  col-md-6">
             <label class="control-label">Số vé</label>
-          <input class="form-control" type="number" required value="20000">
+          <input id="input-sove" class="form-control" type="number" required value="20000">
         </div>
         <div class="form-group col-md-6 ">
             <label for="exampleSelect1" class="control-label">Tình trạng vé</label>
@@ -251,11 +251,11 @@ data-keyboard="false">
           </div>
           <div class="form-group col-md-6">
             <label class="control-label">Đơn giá</label>
-            <input class="form-control" type="text" value="700.000VND">
+            <input id="input-dongia" class="form-control" type="text" value="700.000VND">
           </div>
           <div class="form-group col-md-6">
             <label for="exampleSelect1" class="control-label">Loại vé</label>
-            <select class="form-control" id="exampleSelect1">
+            <select class="form-control" id="select-loaive">
               <option>STANDARD</option>
               <option>PLUS</option>
             </select>
@@ -267,7 +267,7 @@ data-keyboard="false">
     color: #ea0000;">Chỉnh sửa vé nâng cao</a>
       <BR>
       <BR>
-      <button class="btn btn-save" type="button">Lưu lại</button>
+        <a class="btn btn-save" data-dismiss="modal" type="button">Lưu lại</a>
       <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
       <BR>
     </div>
@@ -287,62 +287,15 @@ MODAL
   
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="src/jquery.table2excel.js"></script>
     <script src="js/main.js"></script>
-    <!-- The javascript plugin to display page loading on top-->
-    <script src="js/plugins/pace.min.js"></script>
     <!-- Page specific javascripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <!-- Data table plugin-->
-    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $('#sampleTable').DataTable();
-        //Thời Gian
-    function time() {
-      var today = new Date();
-      var weekday = new Array(7);
-      weekday[0] = "Chủ Nhật";
-      weekday[1] = "Thứ Hai";
-      weekday[2] = "Thứ Ba";
-      weekday[3] = "Thứ Tư";
-      weekday[4] = "Thứ Năm";
-      weekday[5] = "Thứ Sáu";
-      weekday[6] = "Thứ Bảy";
-      var day = weekday[today.getDay()];
-      var dd = today.getDate();
-      var mm = today.getMonth() + 1;
-      var yyyy = today.getFullYear();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      nowTime = h + " giờ " + m + " phút " + s + " giây";
-      if (dd < 10) {
-        dd = '0' + dd
-      }
-      if (mm < 10) {
-        mm = '0' + mm
-      }
-      today = day + ', ' + dd + '/' + mm + '/' + yyyy;
-      tmp = '<span class="date"> ' + today + ' - ' + nowTime +
-        '</span>';
-      document.getElementById("clock").innerHTML = tmp;
-      clocktime = setTimeout("time()", "1000", "Javascript");
-
-      function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        }
-        return i;
-      }
-    }
-    </script>
+    
     <script>
         function deleteRow(r) {
             var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("myTable").deleteRow(i);
+            document.getElementById("sampleTable").deleteRow(i);
         }
         jQuery(function () {
             jQuery(".trash").click(function () {
@@ -352,19 +305,65 @@ MODAL
                     buttons: ["Hủy bỏ", "Đồng ý"],
                 })
                     .then((willDelete) => {
+                      
                         if (willDelete) {
+                          deleteRow(this)
                             swal("Đã xóa thành công.!", {
-
                             });
                         }
                     });
             });
         });
-        oTable = $('#sampleTable').dataTable();
-        $('#all').click(function (e) {
-            $('#sampleTable tbody :checkbox').prop('checked', $(this).is(':checked'));
-            e.stopImmediatePropagation();
-        });
+  //Sự kiện khi ấn nút sửa
+        $(".btn-sm").click(function(){
+          //Lưu giá trị nút sửa để sử dụng vì trong sự kiện click của nút save this khoong còn là nút sửa nữa
+          let btnEdit = this
+          //Sự kiện khi ấn nút save
+          $(".btn-save").click(function(){
+            //Lấy giá tri các ô input và select
+            let maVe = $("#input-mave").val()
+            let tenVe = $("#input-tenve").val()
+            let soVe = $("#input-sove").val()
+            let tinhTrangVe = $("#exampleSelect1 option:selected").text();
+            let donGia = $("#input-dongia").val()
+            let loaive = $("#select-loaive option:selected").text();
+            console.log(maVe +" "+tenVe+" "+soVe +" "+tinhTrangVe+" "+donGia+" "+tinhTrangVe)
+            // deleteRow(btnEdit)
+      
+            var table = document.getElementById("sampleTable");
+            //Tạo 1 dòng mới
+            // giả dụ click vào nút sửa của dòng thứ 3 thì dòng được tạo mới sẽ là dòng thứ 3
+            // Dòng bị click sẽ bị đẩy xuống dòng thứ 4
+            var row = table.insertRow(btnEdit.parentNode.parentNode.rowIndex);
+            //Tạo các ô trong dòng
+            // ngoài 6 thuộc tính bình thường như mã vé, tên vé... thì còn 2 ô khác là ô hiện check box(ô đầu tiên) và ô hiện 2 nút sửa xóa(ô cuối cùng)
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+            var cell4 = row.insertCell(4);
+            var cell5 = row.insertCell(5);
+            var cell6 = row.insertCell(6);
+            var cell7 = row.insertCell(7);
+            //insert giá trị vào các dòng
+            cell0.innerHTML = `<input type="checkbox" name="check1" value="1">`
+            cell1.innerHTML = maVe;
+            cell2.innerHTML = tenVe;
+            cell3.innerHTML = soVe;
+            //do ô này có class để hiện màu nên phải làm kiểu này
+            cell4.innerHTML = `<span class="badge bg-success">${tinhTrangVe}</span>`;
+            cell5.innerHTML = loaive;
+            cell6.innerHTML = donGia;
+            cell7.innerHTML = `<button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
+                                        onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"
+                  data-target="#ModalUP"><i class="fas fa-edit"></i></button>`
+            //Xóa dòng vừa ấn nút sửa    
+            document.getElementById("sampleTable").deleteRow(btnEdit.parentNode.parentNode.rowIndex);
+          })
+        })     
+ 
     </script>
 </body>
 

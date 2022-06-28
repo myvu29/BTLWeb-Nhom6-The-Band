@@ -51,11 +51,11 @@
     <hr>
     <ul class="app-menu">
     
-      <li><a class="app-menu__item active" href="table-data-product.html"><i
+      <li><a class="app-menu__item " href="table-data-product.html"><i
             class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý vé</span></a>
       </li>
       
-            <li><a class="app-menu__item" href="dichvuql.html"><i
+            <li><a class="app-menu__item active" href="dichvuql.html"><i
               class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý nhạc</span></a>
         </li>
      
@@ -221,15 +221,15 @@ data-keyboard="false">
       <div class="row">
         <div class="form-group col-md-6">
             <label class="control-label">Mã bài hát</label>
-            <input class="form-control" type="number" value="">
+            <input id="input-manhac"class="form-control" type="number" value="">
           </div>
         <div class="form-group col-md-6">
             <label class="control-label">Tên bài hát</label>
-          <input class="form-control" type="text" required value="">
+          <input id="input-tennhac"class="form-control" type="text" required value="">
         </div>
          <div class="form-group col-md-6">
             <label class="control-label">Thông tin chi tiết</label>
-            <input class="form-control" type="text" value="">
+            <input id="input-ttchitiet"class="form-control" type="text" value="">
           </div>
       </div>
       <BR>
@@ -269,53 +269,11 @@ MODAL
     <!-- Data table plugin-->
     <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $('#sampleTable').DataTable();
-        //Thời Gian
-    function time() {
-      var today = new Date();
-      var weekday = new Array(7);
-      weekday[0] = "Chủ Nhật";
-      weekday[1] = "Thứ Hai";
-      weekday[2] = "Thứ Ba";
-      weekday[3] = "Thứ Tư";
-      weekday[4] = "Thứ Năm";
-      weekday[5] = "Thứ Sáu";
-      weekday[6] = "Thứ Bảy";
-      var day = weekday[today.getDay()];
-      var dd = today.getDate();
-      var mm = today.getMonth() + 1;
-      var yyyy = today.getFullYear();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      nowTime = h + " giờ " + m + " phút " + s + " giây";
-      if (dd < 10) {
-        dd = '0' + dd
-      }
-      if (mm < 10) {
-        mm = '0' + mm
-      }
-      today = day + ', ' + dd + '/' + mm + '/' + yyyy;
-      tmp = '<span class="date"> ' + today + ' - ' + nowTime +
-        '</span>';
-      document.getElementById("clock").innerHTML = tmp;
-      clocktime = setTimeout("time()", "1000", "Javascript");
-
-      function checkTime(i) {
-        if (i < 10) {
-          i = "0" + i;
-        }
-        return i;
-      }
-    }
-    </script>
+  
     <script>
         function deleteRow(r) {
             var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("myTable").deleteRow(i);
+            document.getElementById("sampleTable").deleteRow(i);
         }
         jQuery(function () {
             jQuery(".trash").click(function () {
@@ -326,6 +284,7 @@ MODAL
                 })
                     .then((willDelete) => {
                         if (willDelete) {
+                          deleteRow(this)
                             swal("Đã xóa thành công.!", {
 
                             });
@@ -333,11 +292,7 @@ MODAL
                     });
             });
         });
-        oTable = $('#sampleTable').dataTable();
-        $('#all').click(function (e) {
-            $('#sampleTable tbody :checkbox').prop('checked', $(this).is(':checked'));
-            e.stopImmediatePropagation();
-        });
+        
     </script>
 </body>
 

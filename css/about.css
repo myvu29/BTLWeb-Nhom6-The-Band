@@ -12,11 +12,7 @@
     height: 600px;
     display: flex;
     flex-direction: column;
-  }
-  .carousel-inner h2{
-    font-family: 'Comic Neue', cursive;
-            font-family: 'Roboto', sans-serif; 
-            color: #ffff;
+    position: relative;
   }
 /* css about section */
 .news_section h2,
@@ -114,7 +110,6 @@ width: 100%;
 display: inline-block;
 text-align: center;
 border-radius: 30px;
-float: right;
 margin-top: 53px;
 }
 
@@ -130,7 +125,7 @@ margin-top: 53px;
 
 }
 .Gallery_img figure img {
-  /* width: 100%; */
+
   width: 345px;
   height: 300px;
   
